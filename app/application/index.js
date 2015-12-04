@@ -7,8 +7,8 @@ var services   = require('./services');
 //var filters    = require('./filters');
 
 module.exports = angular.module('myApp.application', [
-//  services,
-//  directives,
-//  filters
+  services,
+  //directives,
+  //filters
 ])
 .name;

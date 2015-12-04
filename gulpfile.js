@@ -96,17 +96,6 @@ gulp.task('lint', function() {
   .pipe(jshint.reporter('default'));
 });
 
-// gulp.task('browserify', function() {  
-//   return gulp.src(['app/index.js'])
-//   .pipe(plugins.browserify({
-//     insertGlobals: true,
-//     debug: true
-//   }))
-//   .pipe(plugins.concat('bundle.js'))
-//   .pipe(gulp.dest('dist/js'))
-//   .pipe(refresh(lrserver));
-// });
-
 gulp.task('browserify', function () {
   // compile js files
   return browserify({
@@ -119,9 +108,7 @@ gulp.task('browserify', function () {
   .pipe(gulp.dest(paths.dist.js))  
 });
 
-
 gulp.task('views', function() {
-  // Get our index.html
   gulp.src('app/index.html')
   .pipe(gulp.dest('dist'));
 
