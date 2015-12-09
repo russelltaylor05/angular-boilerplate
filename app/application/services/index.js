@@ -1,9 +1,9 @@
 'use strict';
 
-var angular     = require('angular');
+var angular  = require('angular');
 
-var Projects    = require('./projects');
+var Users    = require('./users');
 
 module.exports = angular.module('myApp.application.services', [])
-.factory('Projects', Projects)
-.name
+.factory('Users', Users)
+.name;

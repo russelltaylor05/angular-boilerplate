@@ -2,7 +2,7 @@
 
 module.exports = function ($stateProvider) {
   $stateProvider
-  .state('plugins', {
+  .state('home', {
     url: '/',
     templateUrl: '/views/plugin/index.html',
     controller: 'MyAppCtrl',

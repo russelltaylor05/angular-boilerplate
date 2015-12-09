@@ -38,6 +38,7 @@ var paths  = {
   }
 };
 
+/* TODO: Live Reload not working */
 var server = express();
 server.use(livereload({port: livereloadport}));
 server.use(express.static('./dist'));
@@ -48,6 +49,7 @@ server.all('/*', function(req, res) {
 gulp.task('start', ['compile', 'watch'], function() {
   server.listen(serverport);
   lrserver.listen(livereloadport);
+  console.log('Server started at http://localhost:' + serverport);
 });
 
 gulp.task('compile', function (done) {
@@ -70,7 +72,7 @@ gulp.task('watch', [], function() {
     'compile'
   ]);
   
-  gulp.watch(['app/index.html', 'app/views/**/*.html'], [
+  gulp.watch(['app/*.html', 'app/**/*.html'], [
     'compile'
   ]);
 });
@@ -97,7 +99,6 @@ gulp.task('lint', function() {
 });
 
 gulp.task('browserify', function () {
-  // compile js files
   return browserify({
     debug: true
   })
@@ -116,7 +117,6 @@ gulp.task('views', function() {
   .pipe(gulp.dest('dist/views/'))
   .pipe(refresh(lrserver));
 });
-
 
 gulp.task('styles', function () {
   return gulp.src(paths.sassRoot)

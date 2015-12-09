@@ -1,11 +1,8 @@
 'use strict';
 
-module.exports = function ($rootScope, $scope, API_URL, Projects) {
+module.exports = function ($rootScope, $scope, API_URL, Users, $facebook) {
   
-  Projects.findAll()
-  .then(function (data) {
-    console.log(data);
-  });
-  
-  $scope.message = API_URL;
+  $scope.configValue = API_URL;
+  $scope.serviceValue = Users.getUser();
+
 };

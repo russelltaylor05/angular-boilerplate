@@ -5,6 +5,8 @@ var router      = require('angular-ui-router');
 var bootstrap   = require('angular-ui-bootstrap');
 var config      = require('config');
 
+var ngFacebook  = require('ng-facebook');
+
 var appConfig   = require('./config');
 var appRun      = require('./run');
 
@@ -15,6 +17,8 @@ module.exports = angular.module('myApp', [
   config,
   bootstrap,
   router,
+
+  ngFacebook,
 
   application,
   plugin
