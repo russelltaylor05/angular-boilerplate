@@ -1,9 +1,11 @@
 {
-  "name": "cangrejo-dash",
+  "name": "angular-boilerplate",
   "version": "1.0.0",
   "description": "",
+  "repository": "https://github.com/russelltaylor05/angular-boilerplate.git",
   "main": "app/index.js",
   "scripts": {
+    "start": "gulp start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
